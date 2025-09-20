@@ -47,7 +47,7 @@ pipeline {
                 script {
                     sh '''
                        # Update kubeconfig for authentication
-                      aws eks update-kubeconfig --region ${AWS_REGION} --name server-deployment
+                      aws eks update-kubeconfig --region ${AWS_REGION} --name node-cluster
                       sed -i "s|<ECR_URI>|${ECR_URI}|g" deployment.yaml
                       sed -i "s|:latest|:${IMAGE_TAG}|g" deployment.yaml
                       kubectl apply -f deployment.yaml
