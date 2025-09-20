@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_ACCOUNT_ID = '287043460198'
-        AWS_REGION     = 'ap-southeast-1'
+        AWS_REGION     = 'ap-south-1'
         ECR_REPO       = 'nodejs-app-repo'
         ECR_URI        = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}"
     }
